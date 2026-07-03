@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6-Grid Photo Gallery</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f4f4;
+      padding: 32px 16px;
+      color: #222;
+    }
+
+    .gallery-wrap {
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      text-align: center;
+      font-size: 26px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .tile {
+      background: #fff;
+      border-radius: 14px;
+      border: 2px solid #000;
+      overflow: hidden;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.10);
+      transform: translateZ(0);
+      transition: transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .tile:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+    }
+
+    .tile img {
+      width: 100%;
+      height: 220px;
+      display: block;
+      object-fit: cover;
+    }
+
+    .caption {
+      padding: 10px 12px 14px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .refresh-row {
+      display: flex;
+      justify-content: center;
+      margin-top: 18px;
+    }
+
+    #refreshBtn {
+      padding: 10px 18px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 700;
+      transition: background 160ms ease, transform 160ms ease;
+    }
+
+    #refreshBtn:hover {
+      background: #0056b3;
+      transform: translateY(-1px);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #refreshBtn {
+        transition: none;
+      }
+
+      #refreshBtn:hover {
+        transform: none;
+      }
+    }
+
+    /* Responsive: keep it as a 6-item gallery but change the grid shape */
+    @media (max-width: 820px) {
+      .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+
+      .tile img {
+        height: 240px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery-wrap">
+    <h1>Photo Gallery (6)</h1>
+
+    <section class="gallery" aria-label="6-grid photo gallery">
+      <figure class="tile">
+        <img data-seed-index="1" src="https://picsum.photos/seed/gallery-1-0/600/400" alt="Photo 1" />
+        <figcaption class="caption">Photo 1</figcaption>
+      </figure>
+
+      <figure class="tile">
+        <img data-seed-index="2" src="https://picsum.photos/seed/gallery-2-0/600/400" alt="Photo 2" />
+        <figcaption class="caption">Photo 2</figcaption>
+      </figure>
+
+      <figure class="tile">
+        <img data-seed-index="3" src="https://picsum.photos/seed/gallery-3-0/600/400" alt="Photo 3" />
+        <figcaption class="caption">Photo 3</figcaption>
+      </figure>
+
+      <figure class="tile">
+        <img data-seed-index="4" src="https://picsum.photos/seed/gallery-4-0/600/400" alt="Photo 4" />
+        <figcaption class="caption">Photo 4</figcaption>
+      </figure>
+
+      <figure class="tile">
+        <img data-seed-index="5" src="https://picsum.photos/seed/gallery-5-0/600/400" alt="Photo 5" />
+        <figcaption class="caption">Photo 5</figcaption>
+      </figure>
+
+      <figure class="tile">
+        <img data-seed-index="6" src="https://picsum.photos/seed/gallery-6-0/600/400" alt="Photo 6" />
+        <figcaption class="caption">Photo 6</figcaption>
+      </figure>
+    </section>
+
+    <div class="refresh-row">
+      <button id="refreshBtn" type="button">Refresh Images</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const btn = document.getElementById('refreshBtn');
+      const images = Array.from(document.querySelectorAll('img[data-seed-index]'));
+      let refreshCount = 0;
+
+      function refreshImages() {
+        refreshCount += 1;
+        images.forEach((img) => {
+          const seedIndex = img.getAttribute('data-seed-index');
+          img.src = `https://picsum.photos/seed/gallery-${seedIndex}-${refreshCount}/600/400`;
+        });
+      }
+
+      btn.addEventListener('click', refreshImages);
+    })();
+  </script>
+</body>
+</html>
+
+

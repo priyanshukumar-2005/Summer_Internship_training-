@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Opaque Ball Task</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: #0b1020;
+      overflow: hidden;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+
+    /* Full-screen stage */
+    .stage {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      display: block;
+    }
+
+    /* Ball starts at top-center */
+    .ball {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 56px;
+      height: 56px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: #66e3ff;
+      /* initial opacity */
+      opacity: 0.15;
+      /* Smooth visual */
+      box-shadow: 0 0 18px rgba(102, 227, 255, 0.65);
+      will-change: transform, opacity, background-color;
+      animation: fallAndFade 2.2s ease-in-out infinite alternate;
+
+    }
+
+
+
+
+    @keyframes fallAndFade {
+      0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.15;
+        background-color: #66e3ff;
+        box-shadow: 0 0 18px rgba(102, 227, 255, 0.65);
+      }
+      50% {
+        opacity: 0.7;
+      }
+      100% {
+        transform: translate(-50%, calc(100vh - 0px)) scale(0.98);
+        opacity: 0.95;
+        background-color: #ff4d8d;
+        box-shadow: 0 0 18px rgba(255, 77, 141, 0.65);
+      }
+    }
+
+
+    @keyframes backAndFade {
+      0% {
+        transform: translate(-50%, calc(100vh - 0px)) scale(0.98);
+        opacity: 0.95;
+      }
+      50% {
+        opacity: 0.7;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.15;
+        background-color: #66e3ff;
+        box-shadow: 0 0 18px rgba(102, 227, 255, 0.65);
+      }
+
+    }
+
+
+    /* Restart hint */
+    .hint {
+      position: absolute;
+      left: 50%;
+      bottom: 16px;
+      transform: translateX(-50%);
+      color: rgba(255,255,255,0.75);
+      font-size: 14px;
+      user-select: none;
+      text-align: center;
+      padding: 8px 12px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 10px;
+      backdrop-filter: blur(6px);
+    }
+  </style>
+</head>
+<body>
+  <div class="stage" id="stage">
+    <div class="ball" id="ball" aria-label="moving opaque ball"></div>
+  </div>
+
+  <script>
+    // Optional: restart animation on click anywhere
+    const stage = document.getElementById('stage');
+    const ball = document.getElementById('ball');
+
+    function restart() {
+      // Clear and reapply the animation so it restarts reliably
+      ball.style.animation = 'none';
+      // force reflow
+      void ball.offsetHeight;
+      ball.style.animation = '';
+    }
+
+    stage.addEventListener('click', restart);
+  </script>
+</body>
+</html>
+
