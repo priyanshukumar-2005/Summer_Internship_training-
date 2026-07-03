@@ -1,0 +1,720 @@
+<!-- Code for a navigation bar
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body { font-family: sans-serif; margin: 0; }
+    .navbar { display: flex; background: #333; padding: 15px; }
+    .navbar a { color: white; text-decoration: none; padding: 0 15px; }
+    .navbar a:hover { color: #ddd; }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</body>
+</html> -->
+
+
+<!-- Code for students table and details
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr bgcolor="#f2f2f2">
+      <th>Name</th>
+      <th>Roll Number</th>
+      <th>Course</th>
+      <th>Marks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Alex Smith</td>
+      <td>101</td>
+      <td>Computer Science</td>
+      <td>85</td>
+    </tr>
+    <tr>
+      <td>Maria Jones</td>
+      <td>102</td>
+      <td>Data Science</td>
+      <td>92</td>
+    </tr>
+  </tbody>
+</table> -->
+
+
+<!-- Code for registration form
+<form action="/submit-registration" method="POST">
+  <h2>Registration Form</h2>
+  <p>
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required>
+  </p>
+  <p>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required>
+  </p>
+  <p>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" required>
+  </p>
+  <p>
+    <label>Gender:</label><br>
+    <input type="radio" id="male" name="gender" value="male"> <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female"> <label for="female">Female</label>
+    <input type="radio" id="other" name="gender" value="other"> <label for="other">Other</label>
+  </p>
+  <p>
+    <label>Skills:</label><br>
+    <input type="checkbox" id="html" name="skills" value="html"> <label for="html">HTML</label>
+    <input type="checkbox" id="css" name="skills" value="css"> <label for="css">CSS</label>
+    <input type="checkbox" id="js" name="skills" value="js"> <label for="js">JavaScript</label>
+  </p>
+  <p>
+    <label for="country">Country:</label><br>
+    <select id="country" name="country">
+      <option value="">Select Country</option>
+      <option value="us">United States</option>
+      <option value="ca">Canada</option>
+      <option value="uk">United Kingdom</option>
+      <option value="in">India</option>
+    </select>
+  </p>
+  <p>
+    <button type="submit">Register</button>
+  </p>
+</form> -->
+
+
+<!-- Code for cards with equal spacing
+<style>
+  .card-container {
+    display: flex;
+    justify-content: space-between; 
+    gap: 20px;                    
+    padding: 20px;
+  }
+  .card {
+    flex: 1;                   
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+  }
+</style>
+<div class="card-container">
+  <div class="card"><h3>Card 1</h3><p>Content goes here.</p></div>
+  <div class="card"><h3>Card 2</h3><p>Content goes here.</p></div>
+  <div class="card"><h3>Card 3</h3><p>Content goes here.</p></div>
+</div> -->
+
+
+<!-- Code for a six image grid
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #f4f4f4;
+      font-family: sans-serif;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 15px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .gallery img:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery">
+    <img src="https://picsum.photos/600/400?random=1" alt="Gallery Image 1">
+    <img src="https://picsum.photos/600/400?random=2" alt="Gallery Image 2">
+    <img src="https://picsum.photos/600/400?random=3" alt="Gallery Image 3">
+    <img src="https://picsum.photos/600/400?random=4" alt="Gallery Image 4">
+    <img src="https://picsum.photos/600/400?random=5" alt="Gallery Image 5">
+    <img src="https://picsum.photos/600/400?random=6" alt="Gallery Image 6">
+  </div>
+</body>
+</html> -->
+
+
+<!-- Code for centered login page
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: lightgray;
+        }
+        .login {
+            width: 300px;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid black;
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+<div class="login">
+    <h2>Login</h2>
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+    <button>Login</button>
+</div>
+</body>
+</html> -->
+
+
+<!-- Code for square rotation
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rotating Square</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #1a1a1a;
+      margin: 0;
+    }
+    .square {
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(45deg, #ff416c, #ff4b2b);
+      border-radius: 12px;
+      animation: spin 3s linear infinite;
+    }
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="square"></div>
+</body>
+</html> -->
+
+
+<!-- Code for pricing card with hover effect
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Card</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #f4f6f9;
+      font-family: system-ui, sans-serif;
+      margin: 0;
+    }
+    .pricing-card {
+      background: white;
+      padding: 35px 30px;
+      border-radius: 16px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      border: 1px solid #eef2f5;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .plan-name { font-size: 18px; color: #666; font-weight: 600; margin-bottom: 10px; }
+    .price { font-size: 42px; font-weight: 700; color: #111; margin-bottom: 20px; }
+    .price span { font-size: 16px; color: #888; font-weight: 400; }
+    .features { list-style: none; padding: 0; margin: 0 0 30px 0; color: #555; line-height: 2.2; }
+    .btn {
+      display: block;
+      padding: 12px;
+      background: #0066cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.2s ease;
+    }
+    .pricing-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 66, 204, 0.15);
+      border-color: #0066cc;
+    }
+    .btn:hover {
+      background: #0052a3;
+    }
+  </style>
+</head>
+<body>
+  <div class="pricing-card">
+    <div class="plan-name">Pro Plan</div>
+    <div class="price">$29<span>/mo</span></div>
+    <ul class="features">
+      <li>✓ 5 Dynamic Projects</li>
+      <li>✓ 50GB SSD Storage</li>
+      <li>✓ 24/7 Priority Support</li>
+      <li>✓ Advanced Analytics</li>
+    </ul>
+    <a href="#" class="btn">Get Started</a>
+  </div>
+</body>
+</html> -->
+
+
+<!-- Code for website
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic HTML5 Template</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f6f9;
+        }
+        header {
+            background-color: #1a252f;
+            color: #ffffff;
+            padding: 2.5rem 1rem;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            color: #bdc3c7;
+            font-size: 1.1rem;
+        }
+        nav {
+            background-color: #34495e;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li a {
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+        }
+        nav ul li a:hover {
+            background-color: #2c3e50;
+        }
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+        section {
+            background: #ffffff;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        section h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 0.5rem;
+        }
+        article {
+            margin-bottom: 2.5rem;
+        }
+        article:last-child {
+            margin-bottom: 0;
+        }
+        article h3 {
+            color: #2980b9;
+            font-size: 1.4rem;
+            margin-bottom: 0.25rem;
+        }
+        article .meta {
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            margin-bottom: 1rem;
+        }
+        article code {
+            background: #f8f9fa;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        .read-more {
+            display: inline-block;
+            margin-top: 0.75rem;
+            color: #2980b9;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .read-more:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            background-color: #1a252f;
+            color: #95a5a6;
+            font-size: 0.9rem;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TechPulse Blog</h1>
+        <p>Your weekly dose of clean code and modern web design.</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#articles">Articles</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="articles">
+            <h2>Featured Articles</h2>
+            <article>
+                <h3>Understanding Semantic HTML</h3>
+                <p class="meta">Published on July 3, 2026 by Alex Chen</p>
+                <p>Semantic HTML tags clearly describe their meaning in a human- and machine-readable way. Elements like <code>&lt;header&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;footer&gt;</code> make it easier for search engines to crawl your site and improve accessibility for screen readers.</p>
+                <a href="#" class="read-more">Read More</a>
+            </article>
+            <article>
+                <h3>Mastering CSS Grid Layouts</h3>
+                <p class="meta">Published on June 28, 2026 by Sarah Jenkins</p>
+                <p>CSS Grid is a powerful two-dimensional layout system. Unlike Flexbox, which is primarily one-dimensional, Grid handles both rows and columns simultaneously, giving you total control over complex web interfaces.</p>
+                <a href="#" class="read-more">Read More</a>
+            </article>
+        </section>
+        <section id="about">
+            <h2>About TechPulse</h2>
+            <p>We are a community of developers dedicated to sharing practical tutorials, industry news, and design inspiration for the modern web ecosystem.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 TechPulse Media. All rights reserved.</p>
+    </footer>
+</body>
+</html> --> 
+
+
+<!-- Code for portfolio
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priyanshu Kumar | Interactive 3D Portfolio</title>
+    <style>
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+        :root {
+            --bg-color: #0b0f19;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --primary-glow: #38bdf8;
+            --secondary-glow: #a855f7;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+            perspective: 1000px; 
+        }
+        .cursor-glow {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, rgba(168, 85, 247, 0.05) 50%, transparent 100%);
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            transition: transform 0.1s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .bg-mesh {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(168, 85, 247, 0.2) 0%, transparent 70%);
+            top: 20%;
+            left: 10%;
+            border-radius: 50%;
+            filter: blur(40px);
+            animation: float 8s ease-in-out infinite alternate;
+            z-index: 0;
+        }
+        .hero {
+            max-width: 1000px;
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            position: relative;
+            z-index: 2;
+            background: rgba(15, 23, 42, 0.6);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            transform-style: preserve-3d;
+            transform: rotateX(10deg) rotateY(-10deg) translateZ(-50px);
+            opacity: 0;
+            animation: intro3D 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 
+                        0 0 50px rgba(56, 189, 248, 0.05);
+            transition: box-shadow 0.3s ease;
+        }
+        .hero:hover {
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 
+                        0 0 40px rgba(56, 189, 248, 0.15),
+                        0 0 80px rgba(168, 85, 247, 0.1);
+        }
+        .hero-content {
+            flex: 1;
+            transform-style: preserve-3d;
+        }
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.2),
+                         0 0 20px rgba(56, 189, 248, 0.2);
+            transform: translateZ(40px); 
+        }
+        .hero-content h1 span {
+            color: var(--primary-glow);
+            text-shadow: 0 0 15px rgba(56, 189, 248, 0.6);
+        }
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            transform: translateZ(25px);
+        }
+        .btn-group {
+            display: flex;
+            gap: 1.2rem;
+            transform: translateZ(35px);
+        }
+        .cta-btn {
+            display: inline-block;
+            padding: 0.85rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-primary {
+            background-color: var(--primary-glow);
+            color: #0f172a;
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+        }
+        .btn-primary:hover {
+            background-color: #7dd3fc;
+            box-shadow: 0 0 25px var(--primary-glow), 0 5px 15px rgba(56, 189, 248, 0.4);
+            transform: translateY(-3px);
+        }
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-primary);
+            border: 2px solid var(--secondary-glow);
+            box-shadow: inset 0 0 0 rgba(168, 85, 247, 0), 0 0 10px rgba(168, 85, 247, 0.2);
+        }
+        .btn-secondary:hover {
+            background-color: rgba(168, 85, 247, 0.1);
+            box-shadow: 0 0 25px var(--secondary-glow), inset 0 0 10px rgba(168, 85, 247, 0.4);
+            transform: translateY(-3px);
+            text-shadow: 0 0 8px #fff;
+        }
+        .hero-image-wrapper {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            transform-style: preserve-3d;
+            perspective: 800px;
+        }
+        .hero-image {
+            width: 100%;
+            max-width: 380px;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 16px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            transform: translateZ(50px);
+            transition: transform 0.1s ease, box-shadow 0.3s ease;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5),
+                        0 0 30px rgba(168, 85, 247, 0.1);
+        }
+        .hero-image-wrapper:hover .hero-image {
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7),
+                        0 0 40px rgba(56, 189, 248, 0.3);
+        }
+        @keyframes intro3D {
+            to {
+                transform: rotateX(0deg) rotateY(0deg) translateZ(0);
+                opacity: 1;
+            }
+        }
+        @keyframes float {
+            0% { transform: translateY(0px) scale(1); }
+            100% { transform: translateY(-30px) scale(1.1); }
+        }
+        @media (max-width: 768px) {
+            body { padding: 2rem 0; }
+            .hero { flex-direction: column-reverse; text-align: center; gap: 2.5rem; padding: 2rem 1.5rem; }
+            .hero-content h1 { font-size: 2.2rem; }
+            .btn-group { justify-content: center; flex-direction: column; width: 100%; gap: 0.8rem; }
+            .cta-btn { width: 100%; text-align: center; }
+            .cursor-glow { display: none; } /* Disable custom cursor element on touch devices */
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-mesh"></div>
+    <div class="cursor-glow" id="mouseGlow"></div>
+    <main class="hero" id="interactiveCard">
+        <div class="hero-content">
+            <h1>Hi, I'm <span>Priyanshu Kumar</span></h1>
+            <p>An upcoming software developer passionate about building resilient, high-performance web applications. Inspired by elements of persistence and endurance under pressure, I approach programming architecture with structural focus, absolute adaptability, and clean design patterns.</p> 
+            <div class="btn-group">
+                <a href="#projects" class="cta-btn btn-primary">View My Work</a>
+                <a href="#contact" class="cta-btn btn-secondary">Hire Me</a>
+            </div>
+        </div>
+        <div class="hero-image-wrapper" id="imagePerspectiveFrame">
+            <img 
+                src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80" 
+                alt="Illustration of a fallen knight in a flower field on his knees with arrows in his chest" 
+                class="hero-image"
+                id="tiltTargetImage"
+            >
+        </div>
+    </main>
+    <script>
+        const mouseGlow = document.getElementById('mouseGlow');
+        const card = document.getElementById('interactiveCard');
+        const imageFrame = document.getElementById('imagePerspectiveFrame');
+        const targetImg = document.getElementById('tiltTargetImage');
+        window.addEventListener('mousemove', (e) => {
+            mouseGlow.style.left = e.clientX + 'px';
+            mouseGlow.style.top = e.clientY + 'px';
+        });
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left - (rect.width / 2);
+            const y = e.clientY - rect.top - (rect.height / 2);
+            const factorX = y / (rect.height / 2) * -10; 
+            const factorY = x / (rect.width / 2) * 10;
+            card.style.transform = `rotateX(${factorX}deg) rotateY(${factorY}deg)`;
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = `rotateX(0deg) rotateY(0deg)`;
+            card.style.transition = 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)';
+        });    
+        card.addEventListener('mouseenter', () => {
+            card.style.transition = 'none';
+        });
+        imageFrame.addEventListener('mousemove', (e) => {
+            const imgRect = imageFrame.getBoundingClientRect();
+            const imgX = e.clientX - imgRect.left - (imgRect.width / 2);
+            const imgY = e.clientY - imgRect.top - (imgRect.height / 2);
+            const tiltX = (imgY / (imgRect.height / 2)) * -20;
+            const tiltY = (imgX / (imgRect.width / 2)) * 20;  
+            targetImg.style.transform = `translateZ(70px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+        });
+        imageFrame.addEventListener('mouseleave', () => {
+            targetImg.style.transform = `translateZ(50px) rotateX(0deg) rotateY(0deg)`;
+            targetImg.style.transition = 'transform 0.4s ease';
+        });
+        imageFrame.addEventListener('mouseenter', () => {
+            targetImg.style.transition = 'none';
+        });
+    </script>
+</body>
+</html>  -->
+ 
