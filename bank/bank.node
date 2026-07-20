@@ -1,0 +1,8 @@
+@echo off
+REM bank.node - Windows Batch Entry Point
+REM This batch file runs the Node.js module demonstration
+REM Due to Node.js reserving .node extension for native binaries,
+REM this wrapper invokes the actual JavaScript file: bank.node.js
+
+node "%~dp0bank.node.js"
+

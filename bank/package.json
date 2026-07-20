@@ -1,0 +1,14 @@
+{
+  "name": "bank-module-demo",
+  "version": "1.0.0",
+  "description": "A simple Node.js module demonstration",
+  "main": "bank.node.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node bank.node.js",
+    "bank": "bank.node"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
